@@ -1,4 +1,67 @@
 <!DOCTYPE html>
-<html>
-    <body></body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="/stylesheet.css" />
+        <title>Magic Deck Submission</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <div class="top">
+            <h1 id="title">Magic Deck Submission</h1>
+            <p id="description">Do you want to share your magic deck? Do you want someone to look at your deck? You can share your deck ideas with others. There are many that struggle with creating decks for Magic. You can submit your deck ideas here.
+                <br>We'll do the hard work. We'll take the time to review your deck. Share strengths and weaknesses of the deck. Suggest possible improvements that could be made. 
+                <br>By submitting your deck, you can have the chance to have an article written about it. Once the article is published, you can also see how others think of your deck as well!
+                <br> Use the form below to submit your deck. If you're submitting a Commander deck, use the value of either 99 or 98 for the Main Deck, so we can identify if there is one commander or two. Any sections with a * next to it are required. For your deck to be reviewed, you will need to provide either a file upload or link to your deck. 
+            </p>
+        </div>
+        <div class="form">
+            <form id="survey-form">
+                <label id="name-label">Name:   *</label>
+                <input id="name" type="text" placeholder="John Doe or Magic245" required>
+                
+                <label id="email-label">Email:   *</label>
+                <input id="email" type="email" placeholder="johndoe245@email.com" required>
+                
+                <label id="radio-label">Would you like to receive email notifications?</label>
+                <input type="radio" name="notification" id="yes"value="yes" required> <label for="yes">Yes</label>
+                <input type="radio" name="notification" id="no" value="no"> <label for="no">No</label>
+                
+                <label id="number-label">Main Deck:   *</label>
+                <input id="number" min="40" max="150" placeholder="60" type="number" required>
+                
+                <label id="dropdown-label">Format:   *</label>
+                <select id="dropdown" required>
+                    <option id="brawl">Brawl</option>
+                    <option id="commander">Commander</option>
+                    <option id="historic">Historic</option>
+                    <option id="legacy">Legacy</option>
+                    <option id="modern">Modern</option>
+                    <option id="pauper">Pauper</option>
+                    <option id="pioneer">Pioneer</option>
+                    <option id="standard">Standard</option>
+                    <option id="vintage">Vintage</option>
+                </select>
+                
+                <label id="checkbox-label">Colors:  *</label>
+                <input type="checkbox" id="black" name="black" value="black" required> <label for="black">Black</label> 
+                <input type="checkbox" id="blue" name="blue" value="blue" required> <label for="blue">Blue</label> 
+                <input type="checkbox" id="green" name="green" value="green" required> <label for="green">Green</label> 
+                <input type="checkbox" id="white" name="white" value="white" required> <label for="white">White</label> 
+                <input type="checkbox" id="red" name="red" value="red" required> <label for="red">Red</label> 
+                <input type="checkbox" id="colorless" name="colorless" value="colorless" required> <label for="colorless">Colorless</label> 
+                
+                <label for="deckfile">Upload a file: </label>
+                <input type="file" id="deckfile" name="deckfile" accept=".doc,.docx,.img/*" multiple>
+                <label for="decklink">Link your deck: </label>
+                <input type="url" id="decklink" name="decklink">
+
+                <label id="textarea-label">Deck Description and/or Tips:</label>
+                <textarea id="textarea" name="textarea" cols="50" rows="6"></textarea>
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </body>
 </html>
